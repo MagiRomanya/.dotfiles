@@ -25,7 +25,6 @@ mkdir ~/.dotfiles/foo
 Inside of this folder we must create the same structure as if we were in the `$HOME` directory. To add a dotfile located in `$HOME/.config/foo/dotfile` we would have to move it like this:
 
 ``` sh
-mkdir ~/.dotfile/foo/.config
-mkdir ~/.dotfile/foo/.config/foo
+mkdir -p  ~/.dotfile/foo/.config/foo
 mv ~/.config/foo/dotfile ~/.dotfiles/foo/.config/foo/
 ```

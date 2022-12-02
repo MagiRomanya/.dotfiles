@@ -311,6 +311,9 @@ globalkeys = gears.table.join(
     awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("light -Us 'sysfs/backlight/auto' 5")                end,
               {description = "Decrease brightness", group = "client"}),
 
+    -- Launch applications
+    awful.key({ }, "XF86Launch1", function () awful.spawn("firefox")                end,
+              {description = "Lauch firefox", group = "launcher"}),
     -- Volume control
     -- awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("light -As 'sysfs/backlight/auto' 5")                end,
     --           {description = "Increase volume", group = "client"}),
@@ -318,6 +321,10 @@ globalkeys = gears.table.join(
     --           {description = "Decrease volume", group = "client"}),
     -- awful.key({ }, "XF86AudioMute", function () awful.spawn("light -Us 'sysfs/backlight/auto' 5")                end,
     --           {description = "Mutes volume", group = "client"}),
+
+    -- Control keyboard led
+    awful.key({ }, "XF86Launch3", function () awful.spawn("asusctl led-mode -n")                end,
+              {description = "Change keyboard brightness", group = "client"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
